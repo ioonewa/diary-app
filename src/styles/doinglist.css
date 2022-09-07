@@ -1,0 +1,35 @@
+.flex-container3{
+    display: flex;
+    padding: 60px 80px;
+    gap: 20px;
+}
+
+.task-add{
+    width: 320px;
+    height: 400px;
+    border: 6px solid #FFEE95;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.task-add-txt{
+    font-size: 36px;
+    font-weight: 700;
+    color: #FFEE95;
+    text-align: center;
+    margin-top: -40px;
+}
+
+.task-add-btn{
+    width: 100px;
+    height: 30px;
+    background-color: #FFEE95;
+    border-radius: 8px;
+    font-size: 22px;
+    font-weight: 600;
+    color: white;
+    margin-top: 20px;
+}

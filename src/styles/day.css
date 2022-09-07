@@ -1,0 +1,40 @@
+.day{
+    /* flex-direction: row; */
+    width: 260px;
+    height: 300px;
+    flex-wrap: wrap;
+    padding: 0 10px;
+}
+
+.day-header{
+    display: flex;
+    justify-content: space-between;  
+}
+
+.edit-icon{
+    width: 24px;
+    height: 24px;
+    align-self: center;
+}
+
+.day-name{
+    width: 100px;
+    height: 40px;
+    margin-left: 16px;
+}
+
+.day-body{
+    display: flex;
+    flex-direction: column;   
+}
+
+.doing{
+    display: block;
+    width: 240px;
+}
+
+.time{
+    display: inline;
+    float: right;
+}
+

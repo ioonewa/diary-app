@@ -1,0 +1,48 @@
+.task{
+    width: 320px;
+    height: 400px;
+    background-color: #FFEE95;
+    border-radius: 15px;
+    padding: 0 20px;
+}
+
+.task-header{
+    display: flex;
+    justify-content: space-between;  
+}
+
+.edit-icon{
+    width: 24px;
+    height: 24px;
+    align-self: center;
+}
+
+.task-name{
+    font-size: 28px;
+    width: 100px;
+    height: 40px;
+    margin-left: 6px;
+    margin-top: 8px;
+    margin-bottom: 10px;
+    font-weight: 700;
+    align-self: baseline;
+}
+
+.task-body{
+    display: flex;
+    flex-direction: column;   
+}
+
+.edit-icon{
+    width: 24px;
+    height: 24px;
+    align-self: baseline;
+    
+}
+
+.point{
+    font-size: 18px;
+    font-weight: 500;
+    margin-left: 20px;
+    margin-top: 2px;
+}
