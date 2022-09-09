@@ -5,16 +5,15 @@ import Edit from "../icons/edit-icon.png"
 function Day(props){
 
     return(<div className="day" style={{
-        [props.style]: "1px solid black",
-        [props.style2]: "2px solid black"
+        [props.day.style1]: "1px solid black",
+        [props.day.style2]: "2px solid black"
     }}>
         <header className="day-header">
-            <h2 className="day-name">{props.name}</h2>
+            <h2 className="day-name">{props.day.name}</h2>
             <img src={Edit} alt="" className="edit-icon"/>
         </header>
         <main className="day-body">
-            <span className="doing">Studying<p className="time">12:00</p></span>
-            <span className="doing">Something<p className="time">15:00</p></span>
+            {props.day.tasks.map((task)=><span className="doing" key={task.time}>{task.text}<p className="time">{task.time}</p></span>)}
         </main>
     </div>)
 }

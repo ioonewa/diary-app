@@ -3,15 +3,13 @@ import "../styles/task.css"
 import Edit from "../icons/edit-icon.png"
 
 function Task(props){
-
     return(<div className="task">
         <header className="task-header">
-            <h2 className="task-name">{props.name}</h2>
+            <p className="task-name">{props.task.name}</p>
             <img src={Edit} alt="" className="edit-icon"/>
         </header>
         <main className="task-body">
-            <span className="point">Studying</span>
-            <span className="point">Something</span>
+            {props.points.map((point) => <span className="point" key={point.id}>{point.text}</span> )}
         </main>
     </div>)
 }

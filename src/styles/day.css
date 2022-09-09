@@ -14,13 +14,15 @@
 .edit-icon{
     width: 24px;
     height: 24px;
-    align-self: center;
+    align-self: baseline;
 }
 
 .day-name{
     width: 100px;
     height: 40px;
+    margin-top: 8px;
     margin-left: 16px;
+    align-self: baseline;
 }
 
 .day-body{

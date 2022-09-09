@@ -7,7 +7,7 @@
 .task-add{
     width: 320px;
     height: 400px;
-    border: 6px solid #FFEE95;
+    border: 6px dashed #FFEE95;
     border-radius: 15px;
     display: flex;
     flex-direction: column;
@@ -32,4 +32,8 @@
     font-weight: 600;
     color: white;
     margin-top: 20px;
+}
+
+.task-add-btn:hover{
+    color: rgb(35, 35, 35);
 }
