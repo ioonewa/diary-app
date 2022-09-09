@@ -20,7 +20,6 @@
 .task-name{
     font-size: 28px;
     height: 40px;
-    margin-left: 6px;
     margin-top: 8px;
     margin-bottom: 10px;
     font-weight: 700;
@@ -39,9 +38,12 @@
     
 }
 
+.point-block{
+    margin-bottom: 10px;
+}
+
 .point{
     font-size: 18px;
     font-weight: 500;
-    margin-left: 20px;
-    margin-top: 2px;
+    margin-left: 8px;
 }

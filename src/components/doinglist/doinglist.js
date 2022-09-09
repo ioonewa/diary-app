@@ -1,7 +1,8 @@
 import React from "react";
-import Hud from "./hud"
-import "../styles/doinglist.css"
+import Hud from "../hud"
+import "../../styles/pages/doinglist.css"
 import Task from "./task";
+import AddTask from "./addtask";
 
 class DoingList extends React.Component{
     constructor(props){
@@ -15,28 +16,32 @@ class DoingList extends React.Component{
                         {
                             id: 1,
                             checked: false,
-                            text: 'Use bus to go lesson place'
+                            text: 'Use bus to go lesson place',
+                            time: '12:00',
                         },
                         {
                             id: 2,
                             checked: false,
-                            text: 'It\'s good to see it'
+                            text: 'It\'s good to see it',
+                            time: '13:00'
                         },
                         {
                             id: 3,
                             checked: false,
-                            text: 'Now i finished'
+                            text: 'Now i finished',
+                            time: '14:00'
                         },
                     ]
                 },
                 {
                     id: 2,
-                    name: "Some lessons",
+                    name: 'Some lessons',
                     points: [
                         {
                             id: 1,
                             checked: false,
-                            text: 'I hate this error'
+                            text: 'I hate this error',
+                            time: '00:37'
                         }
                     ]
                 }
@@ -49,10 +54,11 @@ class DoingList extends React.Component{
                 <Hud />
                 <div className="flex-container3">
                     {this.state.tasks.map((task) => <Task key={task.id} task={task} points={task.points} />)}
-                    <div className="task-add">
+                    {/* <div className="task-add">
                         <span className="task-add-txt">Add <br/> task block</span>
                         <button className="task-add-btn">Click!</button>
-                    </div>
+                    </div> */}
+                    <AddTask />
                 </div>
             </div>
         )

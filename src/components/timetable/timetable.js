@@ -1,9 +1,7 @@
 import React from "react";
-import Hud from "./hud"
-import "../styles/timetable.css"
+import Hud from "../hud"
+import "../../styles/pages/timetable.css"
 import Day from "./day";
-import Mphrase from "./mphrase";
-import Mphraseoff from "./mphraseoff";
 
 class Timetable extends React.Component{
     constructor(props){
@@ -92,12 +90,6 @@ class Timetable extends React.Component{
                 <div className="flex-container2">
                     <main className="calendar">
                         {this.state.days.map((day) => <Day day={day} key={day.name} />)}
-                        {/* <Day name={"Monday"} style={"borderBottom"} style2={"borderRight"} />
-                        <Day name={"Tuesday"} style={"borderBottom"} style2={"borderRight"} />
-                        <Day name={"Wednesday"} style={"borderBottom"} />
-                        <Day name={"Thursday"} style={"borderTop"} style2={"borderRight"} />
-                        <Day name={"Friday"} style={"borderTop"} style2={"borderRight"}/>
-                        <Day name={"Saturday"} style={"borderTop"} /> */}
                     </main>
                     {/* {this.props.mphrase === true ? <Mphrase setMphrase={this.props.setMphrase} mphrase={this.props.mphrase} /> : <Mphraseoff />} */}
                 </div>

@@ -1,6 +1,6 @@
 import React from "react";
-import "../styles/day.css"
-import Edit from "../icons/edit-icon.png"
+import "../../styles/components/day.css"
+import Edit from "../../icons/edit-icon.png"
 
 function Day(props){
 

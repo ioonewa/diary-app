@@ -1,6 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import "../styles/hud.css"
+import "../styles/components/hud.css"
 
 function Hud(){
     const navigate = useNavigate();

@@ -1,8 +1,8 @@
 import './styles/app.css';
 import React from 'react';
 import { Routes, Route } from "react-router-dom"
-import Timetable from './components/timetable';
-import DoingList from './components/doinglist';
+import Timetable from './components/timetable/timetable.js';
+import DoingList from './components/doinglist/doinglist.js';
 import About from './components/about';
 
 class App extends React.Component {

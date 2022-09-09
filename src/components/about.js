@@ -1,7 +1,7 @@
 import React from "react";
 import Hud from "./hud"
 import Edit from "../icons/edit-icon.png"
-import "../styles/about.css"
+import "../styles/pages/about.css"
 
 function About(){
     return(
