@@ -24,12 +24,6 @@
     flex-direction: column;
 }
 
-.edit-ic{
-    width: 40px;
-    height: 40px;
-    align-self: flex-end;
-}
-
 .phrase{
     align-items: center;
     display: flex;

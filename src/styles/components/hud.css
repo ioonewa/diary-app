@@ -1,6 +1,6 @@
 .menu-bar{
     display: flex;
-    min-height: 100vh;
+    height: 100vh;
     width: 50px;
     background-color: #FFEE95;
     justify-content: center;

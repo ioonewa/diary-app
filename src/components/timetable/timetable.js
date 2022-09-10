@@ -91,7 +91,6 @@ class Timetable extends React.Component{
                     <main className="calendar">
                         {this.state.days.map((day) => <Day day={day} key={day.name} />)}
                     </main>
-                    {/* {this.props.mphrase === true ? <Mphrase setMphrase={this.props.setMphrase} mphrase={this.props.mphrase} /> : <Mphraseoff />} */}
                 </div>
             </div>
         )

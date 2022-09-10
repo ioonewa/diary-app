@@ -1,44 +1,52 @@
 .header-input{
-    width: 240px;
+    width: 180px;
     height: 40px;
     background-color: rgb(84, 84, 84);
     color: white;
     font-size: 20px;
-    padding-left: 5px;
-    margin-top: 8px;
-    margin-bottom: 10px;
-    border-radius: 5px;
     font-weight: 700;
+    border-radius: 5px;
+    padding-left: 5px;
+    margin-top: 5px;
     align-self: baseline;
+}
+
+.icons{
+    width: 55px;
+    height: 40px;
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
 }
 
 .text-form{
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    flex-direction: column;
 }
 
 .text-input{
-    width: 225px;
+    width: 280px;
     height: 26px;
     background: rgb(84, 84, 84);
     color: white;
     font-size: 16px;
-    padding-left: 5px;
-    border-radius: 5px;
     font-weight: 500;
+    border-radius: 5px;
+    padding-left: 5px;
+    margin-top: 5px;
+    align-self: flex-start;
 }
 
 .time-input{
-    width: 50px;
+    width: 114px;
     height: 26px;
     background: rgb(84, 84, 84);
     color: white;
     font-size: 16px;
     padding-left: 5px;
+    margin-top: 6px;
     border-radius: 5px;
     font-weight: 600;
-    margin-left: 5px;
 }
 
 .add-btn{
@@ -46,7 +54,8 @@
     height: 32px;
     background: rgb(84, 84, 84);
     color: white;
-    margin-top: 20px;
+    margin-top: 14px;
     border-radius: 5px;
     font-size: 22px;
+    align-self: center;
 }

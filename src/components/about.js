@@ -1,6 +1,6 @@
 import React from "react";
 import Hud from "./hud"
-import Edit from "../icons/edit-icon.png"
+import {AiFillEdit} from "react-icons/ai"
 import "../styles/pages/about.css"
 
 function About(){
@@ -22,7 +22,7 @@ function About(){
                     <input type="checkbox"/>
                     <div className="flex-container phrase">
                         <div className="container">
-                            <img className="edit-ic" src={Edit} alt="" />
+                            <AiFillEdit className="edit-ic" />
                             <span>Never <br /> give up!</span>
                             {/* fixed it! */}
                         </div>

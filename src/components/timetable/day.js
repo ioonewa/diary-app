@@ -1,6 +1,6 @@
 import React from "react";
 import "../../styles/components/day.css"
-import Edit from "../../icons/edit-icon.png"
+import {AiFillEdit} from "react-icons/ai"
 
 function Day(props){
 
@@ -10,7 +10,7 @@ function Day(props){
     }}>
         <header className="day-header">
             <h2 className="day-name">{props.day.name}</h2>
-            <img src={Edit} alt="" className="edit-icon"/>
+            <AiFillEdit className="edit-icon"/>
         </header>
         <main className="day-body">
             {props.day.tasks.map((task)=><span className="doing" key={task.time}>{task.text}<p className="time">{task.time}</p></span>)}
