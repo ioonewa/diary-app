@@ -4,15 +4,15 @@ import InputText from "./inputtext";
 
 import { AiOutlineCheck, AiOutlineClose } from "react-icons/ai";
 
-class AddTask extends React.Component{
+class EditTask extends React.Component{
     constructor(props){
         super(props)
         this.state = {
-            name: 'header',
-            points: [{}]
+            id: this.props.task.id,
+            name: this.props.task.name,
+            points: this.props.task.points
         }
         this.getInfo = this.getInfo.bind(this)
-        this.sendForm = this.sendForm.bind(this)
     }
 
     getInfo(data){
@@ -24,19 +24,19 @@ class AddTask extends React.Component{
         }]})
     }
 
-    sendForm(){
-        this.setState({name: "header",points: [{}]})
-        this.props.setTask(this.state)
+    editTask(task){
+        this.props.editTask(task);
+        this.props.setEditMode()
     }
 
     render(){
         return(
             <div className="task">
                 <header className="task-header">
-                    <input className="header-input" value={this.state.name} onChange={(event)=> this.setState({name: event.target.value})} onClick={()=> this.setState({name: ""})} placeholder="header"/>
+                    <input className="header-input" value={this.state.name} onChange={(event)=> this.setState({name: event.target.value})} placeholder="header"/>
                     <div className="icons">
-                        <AiOutlineCheck className="icon" onClick={()=> this.sendForm()} />
-                        <AiOutlineClose className="icon" onClick={()=> this.props.setAdd()}/>
+                        <AiOutlineCheck className="icon" onClick={() => this.editTask(this.state)}/>
+                        <AiOutlineClose className="icon" onClick={() => this.props.setEditMode()} />
                     </div>
                 </header>
                 <main className="task-body">
@@ -53,4 +53,4 @@ class AddTask extends React.Component{
     }
 }
 
-export default AddTask
+export default EditTask

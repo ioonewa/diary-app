@@ -1,15 +1,19 @@
 import React from "react";
-import { AiFillEdit } from "react-icons/ai"
+import { AiFillEdit, AiTwotoneDelete } from "react-icons/ai"
 
 function Task(props){
     return(
         <div className="task">
             <header className="task-header">
                 <p className="task-name">{props.task.name}</p>
-                <AiFillEdit className="icon"/>
+                <div className="icons">
+                    <AiFillEdit className="icon" onClick={() => props.setEditMode()} />
+                    <AiTwotoneDelete className="icon" onClick={() => props.deleteTask(props.task.id)} />
+                </div> 
+                
             </header>
             <main className="task-body">
-                {props.points.map((point) => 
+                {props.task.points.map((point) => 
                     <div className="point-block" key={point.id+100}>
                         <span className="point">{point.text}</span>
                         <span className="time">{point.time}</span>

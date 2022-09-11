@@ -1,10 +1,10 @@
 import React from "react";
-import Hud from "../hud"
-import Task from "./task";
+import Hud from "../hud"    
 import AddTask from "./addtask";
 import PreAddTask from "./preaddtask";
 import "../../styles/pages/doinglist.css"
 import "../../styles/components/task.css"
+import TaskComp from "./taskComp";
 
 class DoingList extends React.Component{
     constructor(props){
@@ -52,6 +52,7 @@ class DoingList extends React.Component{
         }
         this.setTask = this.setTask.bind(this)
         this.setAdd = this.setAdd.bind(this)
+        this.deleteTask = this.deleteTask.bind(this)
     }
 
     setTask(task){
@@ -62,6 +63,12 @@ class DoingList extends React.Component{
                 points: task.points
             }]
         })
+        this.setState({addTask: !this.state.addTask})
+    }
+    
+    deleteTask(id){
+        let tasks = this.state.tasks.filter((el) => el.id != id)
+        this.setState({tasks})
     }
 
     setAdd(){
@@ -73,7 +80,7 @@ class DoingList extends React.Component{
             <div className="flex-container">
                 <Hud />
                 <div className="flex-container3">
-                    {this.state.tasks.map((task) => <Task key={task.id} task={task} points={task.points} />)}
+                    {this.state.tasks.map((task) => <TaskComp key={task.id} task={task} points={task.points} deleteTask={this.deleteTask} />)}
                     {this.state.addTask === false ? <PreAddTask setAdd={this.setAdd}/> : <AddTask setTask={this.setTask} setAdd={this.setAdd} />}
                 </div>
             </div>
