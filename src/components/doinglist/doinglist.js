@@ -56,7 +56,7 @@ class DoingList extends React.Component{
     }
 
     setTask(task){
-        const id = this.state.tasks.length;
+        const id = this.state.tasks.length + 1;
         this.setState({tasks: [...this.state.tasks,{
                 id,
                 name: task.name,
@@ -67,7 +67,8 @@ class DoingList extends React.Component{
     }
     
     deleteTask(id){
-        let tasks = this.state.tasks.filter((el) => el.id != id)
+        console.log(this.state.tasks)
+        let tasks = this.state.tasks.filter((el) => el.id !== id)
         this.setState({tasks})
     }
 

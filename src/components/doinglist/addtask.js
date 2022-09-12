@@ -9,7 +9,7 @@ class AddTask extends React.Component{
         super(props)
         this.state = {
             name: 'header',
-            points: [{}]
+            points: [],
         }
         this.getInfo = this.getInfo.bind(this)
         this.sendForm = this.sendForm.bind(this)
@@ -41,7 +41,7 @@ class AddTask extends React.Component{
                 </header>
                 <main className="task-body">
                     {this.state.points.map((point) => 
-                        <div className="point-block" key={point.id}>
+                        <div className="point-block" key={point.id + 200}>
                             <span className="point" >{point.text}</span>
                             <span className="time" >{point.time}</span>
                         </div>
