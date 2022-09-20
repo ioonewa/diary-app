@@ -67,7 +67,6 @@ class DoingList extends React.Component{
     }
     
     deleteTask(id){
-        console.log(this.state.tasks)
         let tasks = this.state.tasks.filter((el) => el.id !== id)
         this.setState({tasks})
     }
@@ -81,7 +80,7 @@ class DoingList extends React.Component{
             <div className="flex-container">
                 <Hud />
                 <div className="flex-container3">
-                    {this.state.tasks.map((task) => <TaskComp key={task.id} task={task} points={task.points} deleteTask={this.deleteTask} />)}
+                    {this.state.tasks.map((task) => <TaskComp key={task.id} task={task} deleteTask={this.deleteTask} />)}
                     {this.state.addTask === false ? <PreAddTask setAdd={this.setAdd}/> : <AddTask setTask={this.setTask} setAdd={this.setAdd} />}
                 </div>
             </div>

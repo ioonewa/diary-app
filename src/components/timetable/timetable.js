@@ -1,7 +1,7 @@
 import React from "react";
 import Hud from "../hud"
 import "../../styles/pages/timetable.css"
-import Day from "./day";
+import DayComp from "./daycomp"
 
 class Timetable extends React.Component{
     constructor(props){
@@ -76,11 +76,6 @@ class Timetable extends React.Component{
                 },
             ]
         }
-        this.editDay = this.editDay.bind(this);
-    }
-
-    editDay(){
-        
     }
 
     render(){
@@ -88,9 +83,9 @@ class Timetable extends React.Component{
             <div className="flex-container">
                 <Hud />
                 <div className="flex-container2">
-                    <main className="calendar">
-                        {this.state.days.map((day) => <Day day={day} key={day.name} />)}
-                    </main>
+                    <div className="calendar">
+                        {this.state.days.map((day) => <DayComp key={day.name} day={day} />)}
+                    </div>
                 </div>
             </div>
         )
